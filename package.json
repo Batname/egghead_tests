@@ -1,0 +1,46 @@
+{
+  "name": "egghead_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "PORT=3000 NODE_ENV=development LOCALE=en nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "babel-runtime": "^5.6.15",
+    "css-loader": "^0.15.1",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-sass": "^2.0.3",
+    "gulp-util": "^3.0.6",
+    "gutil": "^1.6.4",
+    "imports-loader": "^0.6.4",
+    "jade": "^1.11.0",
+    "lodash": "^3.9.3",
+    "node-bourbon": "^4.2.3",
+    "node-libs-browser": "^0.5.2",
+    "node-neat": "^1.7.2",
+    "node-sass": "^3.2.0",
+    "raw-loader": "^0.5.1",
+    "react": "^0.13.3",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.0"
+  },
+  "dependencies": {
+    "co": "^4.5.4",
+    "co-views": "^1.0.0",
+    "koa": "^0.21.0",
+    "koa-cors": "0.0.16",
+    "koa-route": "^2.4.1",
+    "koa-static": "^1.4.9"
+  }
+}
