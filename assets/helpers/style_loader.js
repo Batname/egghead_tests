@@ -1,8 +1,7 @@
-let sheet = (() => {
+function insertRules (style_rows) {
   let style = document.createElement("style");
-  style.appendChild(document.createTextNode(""));
+  style.appendChild(document.createTextNode(style_rows));
   document.head.appendChild(style);
-  return style.sheet;
-})();
+}
 
-export default sheet;
+export default insertRules;

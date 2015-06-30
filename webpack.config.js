@@ -1,5 +1,10 @@
 var path = require("path"),
+    ExtractTextPlugin = require("extract-text-webpack-plugin");
     webpack = require("webpack");
+
+var sassPaths = require("node-neat").includePaths.map(function(sassPath) {
+  return "includePaths[]=" + sassPath;
+}).join("&");
 
 module.exports = {
   entry: {
@@ -20,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: "style!css!sass?includePaths[]="
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!autoprefixer!sass?sourceMap&' + sassPaths)
       },
       {
         test: /\.jsx?$/,

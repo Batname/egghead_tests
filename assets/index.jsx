@@ -2,8 +2,29 @@ import React from 'react';
 
 // import styles
 // http://davidwalsh.name/add-rules-stylesheets
-import sheet from './helpers/style_loader.js'
+import insertRules from './helpers/style_loader.js'
 import mainStyle from '!raw!sass!./sass/index.scss';
-sheet.insertRule(mainStyle, 0);
+insertRules(mainStyle);
 
-React.render(<div>Hello</div>, document.getElementById("main"));
+
+let Calculator = React.createClass({
+  render: function() {
+    return (
+      <div className="calculator">
+        <div>Calculator</div>
+      </div>
+    );
+  }
+});
+
+let CalculatorResult = React.createClass({
+  render: function() {
+    return (
+      <div className="calculator-result">
+        <div>CalculatorResult</div>
+      </div>
+    );
+  }
+});
+
+React.render(<div className="calculator-main"><Calculator /><CalculatorResult /></div>, document.getElementById("main"));
