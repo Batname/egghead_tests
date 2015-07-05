@@ -1,9 +1,14 @@
-var gulp = require('gulp'),
-    webpack = require("webpack"),
-    gutil = require("gutil"),
-    _ = require("lodash"),
-    jade = require("gulp-jade"),
-    webpackConf = require("./webpack.config.js");
+import path from 'path';
+import gulp from 'gulp';
+import gulpLoadPlugins from 'gulp-load-plugins';
+import del from 'del';
+import runSequence from 'run-sequence';
+import webpack from 'webpack';
+import minimist from 'minimist';
+import _ from 'lodash';
+import gutil from 'gutil';
+import jade from 'gulp-jade';
+import webpackConf from './webpack.config.js';
 
 
 gulp.task('templates:index', function() {

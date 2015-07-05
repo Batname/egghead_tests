@@ -128,7 +128,7 @@ export default function (){
       console.log( "Do something with this: ", err);
     } finally{
       console.log(totalTweets);
-    } 
+    }
   };
 
 

@@ -27,39 +27,47 @@ let CalculatorResult = React.createClass({
   }
 });
 
+let TwitsFeed = React.createClass({
+  render: function(){
+    return (
+            <div className="tweetFeed">
+              <div className="timeLine"></div>
+            </div>
+            )
+  }
+})
+
 let Twits = React.createClass({
   render: function() {
     return (
-      <div className="twits">
-        <div className="statList">
-          <div className="statList__item">
-            <div cclassNamelass="status">
-              <div className="title">Tweets</div>
-              <div className="count totalTweets"></div>
+        <div className="twits">
+          <div className="statList">
+            <div className="statList__item">
+              <div cclassNamelass="status">
+                <div className="title">Tweets</div>
+                <div className="count totalTweets"></div>
+              </div>
             </div>
-          </div>
-          <div className="statList__item">
-            <div className="status">
-              <div className="title">Photos</div>
-              <div className="count totalPhotos"></div>
+            <div className="statList__item">
+              <div className="status">
+                <div className="title">Photos</div>
+                <div className="count totalPhotos"></div>
+              </div>
             </div>
-          </div>
-          <div className="statList__item">
-            <div className="status">
-              <div className="title">Favourites</div>
-              <div className="count totalFavourites"></div>
+            <div className="statList__item">
+              <div className="status">
+                <div className="title">Favourites</div>
+                <div className="count totalFavourites"></div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="tweetFeed">
-          <div className="timeLine"></div>
-        </div>
-      </div>
     );
   }
 });
 // generators experements
+
+React.render(<div className="calculator-main"><Twits /><TwitsFeed /><Calculator /><CalculatorResult /></div>, document.getElementById("main"));
+
 import generator from './helpers/generator';
 generator();
-
-React.render(<div className="calculator-main"><Twits /><Calculator /><CalculatorResult /></div>, document.getElementById("main"));

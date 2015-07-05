@@ -1,0 +1,17 @@
+@import "/home/bat/react_projects/egghead_tests/node_modules/node-bourbon/node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "/home/bat/react_projects/egghead_tests/node_modules/node-neat/node_modules/bourbon-neat/app/assets/stylesheets/_neat.scss";
+
+body {
+  background-color: red;
+}
+
+.calculator-main{
+  @include row();
+  @include outer-container(765px);
+  .calculator{
+    @include span-columns(9);
+  }
+  .calculator-result{
+    @include span-columns(3);
+  }
+}
